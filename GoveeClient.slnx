@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Project Path="GoveeClient.Cli/GoveeClient.Cli.csproj" />
+  <Project Path="GoveeClient.Shared/GoveeClient.Shared.csproj" />
+  <Project Path="GoveeClient.Test/GoveeClient.Test.csproj" />
+  <Project Path="GoveeClient/GoveeClient.csproj" />
+</Solution>
