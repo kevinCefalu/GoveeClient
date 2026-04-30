@@ -22,14 +22,14 @@ public sealed class AuthCommand(CliConfigurationStore configurationStore, IOptio
     [Description("Removes the saved API key from the local CLI settings file.")]
     public bool Clear { get; init; }
 
-    public override Spectre.Console.ValidationResult Validate()
+    public override ValidationResult Validate()
     {
       if (Clear && ApiKey is not null)
       {
-        return Spectre.Console.ValidationResult.Error("Specify either --api-key or --clear, not both.");
+        return ValidationResult.Error("Specify either --api-key or --clear, not both.");
       }
 
-      return Spectre.Console.ValidationResult.Success();
+      return ValidationResult.Success();
     }
   }
 

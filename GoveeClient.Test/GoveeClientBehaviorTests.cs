@@ -1,7 +1,7 @@
 using GoveeClient.Api;
 using GoveeClient.Shared.Models;
 using GoveeClient.Shared.Services.Api;
-using ClientImplementation = global::GoveeClient.GoveeClient;
+using ClientImplementation = GoveeClient.GoveeClient;
 
 namespace GoveeClient.Test;
 

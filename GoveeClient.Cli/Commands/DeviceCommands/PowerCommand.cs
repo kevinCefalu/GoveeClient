@@ -20,9 +20,9 @@ public sealed class PowerCommand(CliClientService cliClientService) : AsyncComma
     [Description("Turns the device off.")]
     public bool Off { get; init; }
 
-    public override Spectre.Console.ValidationResult Validate()
+    public override ValidationResult Validate()
     {
-      Spectre.Console.ValidationResult baseValidation = base.Validate();
+      ValidationResult baseValidation = base.Validate();
       if (!baseValidation.Successful)
       {
         return baseValidation;
@@ -30,10 +30,10 @@ public sealed class PowerCommand(CliClientService cliClientService) : AsyncComma
 
       if (On == Off)
       {
-        return Spectre.Console.ValidationResult.Error("Specify exactly one of --on or --off.");
+        return ValidationResult.Error("Specify exactly one of --on or --off.");
       }
 
-      return Spectre.Console.ValidationResult.Success();
+      return ValidationResult.Success();
     }
   }
 

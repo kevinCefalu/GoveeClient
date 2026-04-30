@@ -24,9 +24,9 @@ public sealed class ColorCommand(CliClientService cliClientService) : AsyncComma
     [Description("Blue channel from 0 to 255.")]
     public int Blue { get; init; }
 
-    public override Spectre.Console.ValidationResult Validate()
+    public override ValidationResult Validate()
     {
-      Spectre.Console.ValidationResult baseValidation = base.Validate();
+      ValidationResult baseValidation = base.Validate();
       if (!baseValidation.Successful)
       {
         return baseValidation;
@@ -34,10 +34,10 @@ public sealed class ColorCommand(CliClientService cliClientService) : AsyncComma
 
       if (Red is < 0 or > 255 || Green is < 0 or > 255 || Blue is < 0 or > 255)
       {
-        return Spectre.Console.ValidationResult.Error("RGB values must each be between 0 and 255.");
+        return ValidationResult.Error("RGB values must each be between 0 and 255.");
       }
 
-      return Spectre.Console.ValidationResult.Success();
+      return ValidationResult.Success();
     }
   }
 

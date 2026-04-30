@@ -4,7 +4,7 @@ using GoveeClient.Shared.Services;
 using GoveeClient.Shared.Services.Api;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using ClientImplementation = global::GoveeClient.GoveeClient;
+using ClientImplementation = GoveeClient.GoveeClient;
 
 namespace GoveeClient.Test;
 

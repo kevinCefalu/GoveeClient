@@ -16,9 +16,9 @@ public sealed class BrightnessCommand(CliClientService cliClientService) : Async
     [Description("Brightness percentage from 1 to 100.")]
     public int Value { get; init; }
 
-    public override Spectre.Console.ValidationResult Validate()
+    public override ValidationResult Validate()
     {
-      Spectre.Console.ValidationResult baseValidation = base.Validate();
+      ValidationResult baseValidation = base.Validate();
       if (!baseValidation.Successful)
       {
         return baseValidation;
@@ -26,10 +26,10 @@ public sealed class BrightnessCommand(CliClientService cliClientService) : Async
 
       if (Value is < 1 or > 100)
       {
-        return Spectre.Console.ValidationResult.Error("Brightness must be between 1 and 100.");
+        return ValidationResult.Error("Brightness must be between 1 and 100.");
       }
 
-      return Spectre.Console.ValidationResult.Success();
+      return ValidationResult.Success();
     }
   }
 

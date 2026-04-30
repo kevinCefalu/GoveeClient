@@ -6,4 +6,5 @@
   <Project Path="GoveeClient.Shared/GoveeClient.Shared.csproj" />
   <Project Path="GoveeClient.Test/GoveeClient.Test.csproj" />
   <Project Path="GoveeClient/GoveeClient.csproj" />
+  <Project Path="GoveeClient.HomeAssistant.AddOn/GoveeClient.HomeAssistant.AddOn.csproj" />
 </Solution>

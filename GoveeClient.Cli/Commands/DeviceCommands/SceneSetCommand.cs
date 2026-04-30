@@ -16,9 +16,9 @@ public sealed class SceneSetCommand(CliClientService cliClientService) : AsyncCo
     [Description("The exact scene name to activate.")]
     public string? SceneName { get; init; }
 
-    public override Spectre.Console.ValidationResult Validate()
+    public override ValidationResult Validate()
     {
-      Spectre.Console.ValidationResult baseValidation = base.Validate();
+      ValidationResult baseValidation = base.Validate();
       if (!baseValidation.Successful)
       {
         return baseValidation;
@@ -26,10 +26,10 @@ public sealed class SceneSetCommand(CliClientService cliClientService) : AsyncCo
 
       if (string.IsNullOrWhiteSpace(SceneName))
       {
-        return Spectre.Console.ValidationResult.Error("Specify --scene.");
+        return ValidationResult.Error("Specify --scene.");
       }
 
-      return Spectre.Console.ValidationResult.Success();
+      return ValidationResult.Success();
     }
   }
 
